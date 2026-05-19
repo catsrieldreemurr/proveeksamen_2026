@@ -4,23 +4,24 @@ import NavbarLink from "./navbarLinks";
 import { Button } from "./button";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 import AssignIcon from "./assignIcons";
+import Link from "next/link";
 
 export default function Navbar(){
     return (
         <nav className="p-5 text-2xl flex justify-between items-center gap-10 border-b-5 border-slate-600">
-            <Typography variant="h1" isBold>NordicDevices</Typography>
+            <Link href={"/"}><Typography variant="h1" isBold>NordicDevices</Typography></Link>
             
             <div className="hidden sm:flex flex-row gap-5 ">
                 <AssignIcon iconPath="/info.png" imageAlt="InfoIcon">
-                    <NavbarLink linkDestination="/">Om Oss</NavbarLink>
+                    <NavbarLink linkDestination="/aboutus">Om Oss</NavbarLink>
                 </AssignIcon>
                 
                 <AssignIcon iconPath="/person.png" imageAlt="PersonIcon">
-                    <NavbarLink linkDestination="/">Om Folka</NavbarLink>
+                    <NavbarLink linkDestination="/people">Om Folka</NavbarLink>
                 </AssignIcon>
 
                 <AssignIcon iconPath="/devices.png" imageAlt="DeviceIcon">
-                    <NavbarLink linkDestination="/">Våre Tjenester</NavbarLink>
+                    <NavbarLink linkDestination="/services">Våre Tjenester</NavbarLink>
                 </AssignIcon>
             </div>
 
@@ -34,15 +35,15 @@ export default function Navbar(){
                 <PopoverContent>
                     <div className="bg-white p-5 flex flex-col">
                         <AssignIcon iconPath="/info.png" imageAlt="InfoIcon">
-                            <NavbarLink linkDestination="/">Om Oss</NavbarLink>
+                            <NavbarLink linkDestination="/aboutus">Om Oss</NavbarLink>
                         </AssignIcon>
                         
                         <AssignIcon iconPath="/person.png" imageAlt="PersonIcon">
-                            <NavbarLink linkDestination="/">Om Folka</NavbarLink>
+                            <NavbarLink linkDestination="/people">Om Folka</NavbarLink>
                         </AssignIcon>
 
                         <AssignIcon iconPath="/devices.png" imageAlt="DeviceIcon">
-                            <NavbarLink linkDestination="/">Våre Tjenester</NavbarLink>
+                            <NavbarLink linkDestination="/services">Våre Tjenester</NavbarLink>
                         </AssignIcon>
                     </div>
                 </PopoverContent>

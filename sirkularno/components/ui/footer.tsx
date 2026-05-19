@@ -18,9 +18,9 @@ export default function FooterBar(){
                 
             <Footerbox>
                 <Typography variant="h1" isBold>Les Mer</Typography>
-                    <NavbarLink linkDestination="/">Om Oss</NavbarLink>
-                    <NavbarLink linkDestination="/">Om Folka</NavbarLink>
-                    <NavbarLink linkDestination="/">Våre Tjenester</NavbarLink>
+                    <NavbarLink linkDestination="/aboutus">Om Oss</NavbarLink>
+                    <NavbarLink linkDestination="/people">Om Folka</NavbarLink>
+                    <NavbarLink linkDestination="/services">Våre Tjenester</NavbarLink>
             </Footerbox>
 
             <Footerbox>
