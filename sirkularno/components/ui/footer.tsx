@@ -13,6 +13,7 @@ export default function FooterBar(){
             <Footerbox>
                 <Typography variant="h1" isBold>NordicDevices</Typography>
                 <Typography>IT gjort enkelt.</Typography>
+                <Typography style="text-gray-400">© Nordic Devices 2026</Typography>
             </Footerbox>
                 
             <Footerbox>
