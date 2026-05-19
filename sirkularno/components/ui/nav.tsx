@@ -7,7 +7,7 @@ import AssignIcon from "./assignIcons";
 
 export default function Navbar(){
     return (
-        <nav className="p-5 text-2xl flex justify-between items-center gap-10 border-b-5 border-black">
+        <nav className="p-5 text-2xl flex justify-between items-center gap-10 border-b-5 border-slate-600">
             <Typography variant="h1" isBold>NordicDevices</Typography>
             
             <div className="hidden sm:flex flex-row gap-5 ">
@@ -26,7 +26,7 @@ export default function Navbar(){
 
             <Popover>
                 <PopoverTrigger asChild>
-                    <Button variant={"link"} className="sm:hidden flex w-[2rem]">
+                    <Button variant={"link"} className="sm:hidden flex">
                         <Image src={"/menuBlack.png"} height={35} width={35} alt="Menu"></Image>
                     </Button>
                 </PopoverTrigger>

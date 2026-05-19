@@ -10,11 +10,11 @@ export default function Home() {
     <div>
       <Navbar></Navbar>
 
-      {/* Top */}e
+      {/* Top */}
       <div className="relative h-[40rem] w-full flex items-center justify-center"> 
-        <div className="absolute inset-0 bg-[url(/hero_main.jpg)] bg-cover bg-center opacity-100 -z-10 border-b-5 border-green-800"></div>
+        <div className="absolute inset-0 bg-[url(/hero_main.jpg)] bg-cover bg-center opacity-100 -z-10 border-b-5 border-slate-600"></div>
         
-        <div className="text-white">
+        <div className="text-white p-5">
           <Typography isBold isCentered style="text-5xl">IT gjort enkelt.</Typography>
           <Typography isCentered>IT må ikke være så kjempekomplisert. Vi vil gjøre det enklere.</Typography>
         </div>
@@ -22,36 +22,21 @@ export default function Home() {
 
       { /* Main Content */}
       <div className="flex flex-col justify-center items-center p-5">
-        <Sidebox direction="right" imagePath="/sirkel.png" size={600}>
+        <Sidebox direction="right" imagePath="/office.jpg" size={300}>
           <div>
-            <Typography variant="h2" isBold isUnderscore>Kampen om Ressurser</Typography>
-            <Typography>Vi har ikke uendelig med ressurser på jorden.</Typography>
-            <Typography>Mye av det vi har, er allerede blitt brukt, og vi risikerer å gå tom i den nære fremtiden.</Typography>
-            <Typography spacer>Sirkeløkonomien handler om å bruke igjen det vi allerede har brukt, så vi slipper å hente ut nye materialer.</Typography>
+            <Typography variant="h2" isBold isUnderscore>Din assistent innen IT</Typography>
+            <Typography>Du har behovet, vi har kunnskapen.</Typography>
+            <Typography>Vi tar av oss det kompliserte, så du kan fokusere på det som er viktig for deg.</Typography>
           </div>
         </Sidebox>
 
-        <Sidebox direction="left" imagePath="/linje.png" size={200}>
+        <Sidebox direction="left" imagePath="/callcentre.png" size={300}>
           <div>
-            <Typography variant="h2" isBold isUnderscore>Vi kan ikke fortsette slik.</Typography>
-            <Typography>Vi har ikke ressurser nok til å fortsette slik for alltid.</Typography>
-            <Typography>Derfor er det viktig å gjøre hva vi kan for å delta i den sirkulære økonomien.</Typography>
+            <Typography variant="h2" isBold isUnderscore>Vi er der når du trenger oss.</Typography>
+            <Typography>Vi tilbyr våre kunder 24/7-timers support, slik at vi alltid kan hjelpe hvor og når det er nødvendig.</Typography>
+            <Typography spacer>Våre eksperter er bare en telefon unna.</Typography>
           </div>
         </Sidebox>
-      </div>
-
-      <div className="bg-green-500 p-5"> { /* I am very Green */}
-        <div>
-          <Typography variant="h2" isBold isCentered>Lær mer om hvordan du kan hjelpe!</Typography>
-          <Typography isCentered>Vi kan ikke virkelig bli sirkulære uten din hjelp.</Typography>
-          <Link href={"/learn"} className="flex justify-center mt-5"> 
-            <Button variant={"default"} className="p-6">Les mer</Button>
-          </Link>
-
-          <Link href={"/it"} className="flex justify-center mt-5"> 
-            <Button variant={"default"} className="p-6">Les mer om Sirkeløkonomien innenfor IT</Button>
-          </Link>
-        </div>
       </div>
 
       <FooterBar></FooterBar> {/* Footerbar */}

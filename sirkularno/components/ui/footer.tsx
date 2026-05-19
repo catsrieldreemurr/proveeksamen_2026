@@ -1,38 +1,32 @@
 import Image from "next/image";
 import Typography from "./typography";
 import Link from "next/link";
+import Footerbox from "./footerBox";
+import NavbarLink from "./navbarLinks";
+import AssignIcon from "./assignIcons";
 
 const linkStyle = "hover:underline hover:font-bold text-lg"
 
 export default function FooterBar(){
     return (
-        <footer className="bg-green-700 p-5 flex flex-col sm:flex-row gap-5 text-white mt-5 ">
-
-            <div className="w-full sm:w-1/3 flex justify-center items-start gap-5 pt">
-                <Image src={"/recycleGreen.png"} height={100} width={100} alt="Recycle" className="bg-white rounded-full hidden sm:flex"></Image>
-                <div className="flex flex-col justify-center items-center">
-                    <Typography variant="h1" isBold isUnderscore>Bli Sirkulær</Typography>
-                    <Typography>Miljøet trenger oss.</Typography>
-                </div>
-            </div>
-            <div className="w-full sm:w-1/3 flex justify-center items-start gap-5">
-                <div className="flex flex-col justify-center items-center">
-                    <Typography variant="h1" isBold isUnderscore>Undersider</Typography>
-                    <Link href={"/"} className={linkStyle}>- Main</Link>
-                    <Link href={"/learn"} className={linkStyle}>- Les mer</Link>
-                    <Link href={"/it"} className={linkStyle}>- Sirkeløkonomi innenfor IT</Link>
-                </div>
+        <footer className="bg-slate-800 p-5 flex flex-col sm:flex-row gap-5 text-white mt-5 sm:justify-center"> 
+            <Footerbox>
+                <Typography variant="h1" isBold>NordicDevices</Typography>
+                <Typography>IT gjort enkelt.</Typography>
+            </Footerbox>
                 
-            </div>
+            <Footerbox>
+                <Typography variant="h1" isBold>Les Mer</Typography>
+                    <NavbarLink linkDestination="/">Om Oss</NavbarLink>
+                    <NavbarLink linkDestination="/">Om Folka</NavbarLink>
+                    <NavbarLink linkDestination="/">Våre Tjenester</NavbarLink>
+            </Footerbox>
 
-            <div className="w-full sm:w-1/3 flex justify-center items-start gap-5">
-                <div className="flex flex-col justify-center items-center">
-                    <Typography variant="h1" isBold isUnderscore>Andre Ressurser</Typography>
-                    <Link href={"https://www.miljodirektoratet.no/ansvarsomrader/avfall/sirkular-okonomi/"} className={linkStyle}>- Miljødirektoratet</Link>
-                    <Link href={"https://snl.no/sirkul%C3%A6r_%C3%B8konomi"} className={linkStyle}>- Store Norske Leksikon</Link>
-                    <Link href={"https://ndla.no/r/tverrfaglige-temaer/hva-er-sirkular-okonomi/4b18ab4ad8"} className={linkStyle}>- NDLA</Link>
-                </div>
-            </div>
+            <Footerbox>
+                <Typography variant="h1" isBold style="mb-5">Kontakt Oss</Typography>
+                <AssignIcon iconPath="/callIcon.png" imageAlt="Call Icon"><Typography>+12345678</Typography></AssignIcon>
+                <AssignIcon iconPath="/email.png" imageAlt="Call Icon"><Typography>support@nordicdevices.com</Typography></AssignIcon>
+            </Footerbox>
         </footer>
     )
 }

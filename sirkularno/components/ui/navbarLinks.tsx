@@ -10,6 +10,6 @@ interface setprops{
 
 export default function NavbarLink({children, linkDestination, variant}:setprops){
     return (
-        <Link href={linkDestination} className="hover:underline hover:text-slate-700 sm:p-0 p-5"><Typography variant={variant || "h3"} isBold>{children}</Typography></Link>
+        <Link href={linkDestination} className="hover:underline hover:text-slate-700 sm:p-0 p-5"><Typography variant={variant || "h3"}>{children}</Typography></Link>
     )
 }
